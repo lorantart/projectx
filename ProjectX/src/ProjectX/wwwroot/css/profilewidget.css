@@ -1,0 +1,72 @@
+﻿.profilewidget{
+    width:100%;
+    height:100px;
+    margin: 20px 0px 0px 0px;
+    background-color:white;
+    border-radius:5px;
+}
+
+    .profilewidget img {
+	    z-index: 1;
+	    width: 50px;
+	    height: 50px;
+        margin:25px 10px 25px 10px;
+        border-radius: 50%;
+	    float:left;
+        display:inline-block;
+    }
+
+    .profilewidget .artist {
+        text-align:left;
+        color:white;
+        float:left;
+        display:inline-block;
+        height:100%;
+        width:45%;
+        text-overflow:ellipsis;
+    }
+
+        .profilewidget .artist .line{
+            height:20%;
+        }
+
+        .profilewidget .artist .name{
+            font-weight:bold;
+            font-family:'Open Sans';
+            color:black;
+        }
+
+        .profilewidget .artist .class{
+            font-family:'Open Sans';
+            font-style:italic;
+            color:black;
+        }
+
+        .profilewidget .artist .levelbox{
+            background-color:dodgerblue;
+            border-radius:5px;
+            padding:0 5px 0 5px;
+            display:inline-block;
+        }
+
+        .profilewidget .artist .levelbutton{
+            font-weight:bold;
+            font-family:'Open Sans';
+            color:black;
+        }
+
+    .profilewidget .uploadbox{
+        border-radius:5px 5px 5px 5px;
+        background-color:dodgerblue;
+        width:auto;
+        height:auto;
+        float:right;
+        display:inline-block;
+        margin:25px 15px 25px 15px;   
+        float:right;
+        padding: 10px 0 10px 0;
+    }
+
+    .profilewidget .uploadbox .uploadbutton{
+        padding:5px;
+    }

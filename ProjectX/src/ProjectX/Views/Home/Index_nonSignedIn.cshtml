@@ -1,0 +1,76 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<div class="container body-content">
+    <div class="login">
+        <div class="col-xs-12 col-lg-6 col-md-6">
+            <h1>Welcome to ProjectX</h1>
+            <br />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra risus ut placerat aliquam. Curabitur eu nunc dapibus, dapibus ligula eu, ornare mauris. Donec interdum faucibus finibus. Suspendisse fringilla mattis nisi, et tristique mi rutrum nec. Aenean non massa dapibus, sodales enim eu, vehicula metus. Donec porttitor facilisis libero et laoreet.
+            </p>
+            <br />
+            <p>
+                Join Hungary's biggest artistic lorem ipsum. The lorem ipsum of this lorem ipsum is so high that it is quite hard to measure. Why wouldn't you want to be the part of it?
+            </p>
+        </div>
+        <div class="login-container col-xs-12 col-lg-6 col-md-6">
+            <div class="row">
+                <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-signin mg-btm">
+                    <h3 class="heading-desc">
+                        Login to ProjectX
+                    </h3>
+                    <div class="social-box">
+                        <div class="row mg-btm">
+                            <div class="col-md-12">
+                                <a href="#" class="btn btn-primary btn-block">
+                                    <i class="icon-facebook"></i>    Login with Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="col-md-10" style="padding-bottom:8px">
+                            <input asp-for="Email" class="form-control" placeholder="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-10">
+                            <input asp-for="Password" class="form-control" placeholder="Password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                <label asp-for="RememberMe">
+                                    <input asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m => m.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <span class="clearfix"></span>
+                    </div>
+                    <div class="login-footer">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6">
+                                <div class="left-section">
+                                    <a asp-action="ForgotPassword" asp-controller="Account">Forgot your password?</a>
+                                    <a asp-action="Register" asp-controller="Account" asp-route-returnurl="@ViewData["ReturnUrl"]">Sign up now</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-6 pull-right">
+                                <button type="submit" class="btn btn-large btn-danger pull-right">Login</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

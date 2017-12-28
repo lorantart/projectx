@@ -1,0 +1,31 @@
+@model IEnumerable<ProjectX.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="container-fluid">
+    <h1>Users</h1>
+@foreach (var item in Model)
+{
+    <a asp-action="Details" asp-route-id="@item.Id">
+        <div class="card col-xs-6 col-sm-4 col-lg-3 col-md-2">
+            <img src="~/images/img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <div class="cardname">
+                    <h4><b>@Html.DisplayFor(modelItem => item.UserName)</b></h4>
+                </div>
+                <div class="cardregdate">
+                    <p>@Html.DisplayFor(modelItem => item.RegistrationDate)</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    }
+</div>

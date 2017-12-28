@@ -1,0 +1,14 @@
+﻿@using System.Collections.Generic
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    @Html.Partial("Index_signedIn");
+}
+else
+{
+    @Html.Partial("Index_nonSignedIn");
+}
