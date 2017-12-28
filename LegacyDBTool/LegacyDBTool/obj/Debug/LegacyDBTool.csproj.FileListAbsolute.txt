@@ -1,0 +1,6 @@
+c:\sources\LegacyDBTool\LegacyDBTool\bin\Debug\LegacyDBTool.exe.config
+c:\sources\LegacyDBTool\LegacyDBTool\bin\Debug\LegacyDBTool.exe
+c:\sources\LegacyDBTool\LegacyDBTool\bin\Debug\LegacyDBTool.pdb
+c:\sources\LegacyDBTool\LegacyDBTool\obj\Debug\LegacyDBTool.csprojResolveAssemblyReference.cache
+c:\sources\LegacyDBTool\LegacyDBTool\obj\Debug\LegacyDBTool.exe
+c:\sources\LegacyDBTool\LegacyDBTool\obj\Debug\LegacyDBTool.pdb
